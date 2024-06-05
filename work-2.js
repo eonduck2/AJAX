@@ -13,6 +13,16 @@ const getPokemonAJAX = () => {
       console.dir(xhr);
       const result = JSON.parse(xhr.responseText);
       console.dir(result);
+      console.dir(result.msgBody);
+
+      const createdTitleLiArr = [];
+
+      const root = document.getElementById(`root`);
+      result.msgBody.forEach((item) => {
+        createdTitleLiArr.push(`<li>${item.title}</li>`);
+      });
+
+      root.innerHTML = `<ul>${createdTitleLiArr.join("")}</ul>`;
 
       //   const pokemon = result.results;
       //   console.dir(pokemon);
