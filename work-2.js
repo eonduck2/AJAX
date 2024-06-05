@@ -24,6 +24,7 @@ const getPokemonAJAX = () => {
 
       root.innerHTML = `<ul>${createdTitleLiArr.join("")}</ul>`;
 
+      console.log(`테스트`);
       //   const pokemon = result.results;
       //   console.dir(pokemon);
 
